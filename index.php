@@ -1,0 +1,110 @@
+<?php
+include './model.php';
+?>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="resultado.php">
+            <h1>Bhaskara</h1>
+            <input class="n" type="number" name="a" value="<?= $a ?>" placeholder="Insira o valor de A" autofocus="" required=""/>
+            <input class="n" type="number" name="b" value="<?= $b ?>" placeholder="Insira o valor de B" required=""/>
+            <input class="n" type="number" name="c" value="<?= $c ?>" placeholder="Insira o valor de C" required=""/>
+
+            <input class="calcular" type="submit" name="calcular" value="Calcular">
+            <input class="limpar"type="reset" name="limpar" value="Limpar">
+        </form>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        * {
+        font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+        background: linear-gradient(45deg, #CABEFF, #B3A2FF);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .container {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        box-shadow: initial;
+        background: #FFF;
+        padding: 20px 30px;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container button {
+        width: 100px;
+        margin-left: 10px;
+        }
+
+        h1 {
+        color: #2A2A2A;
+        }
+
+        input.n {
+        height: 40px;
+        width: 300px;
+        margin-bottom: 5px;
+        border: none;
+        border-bottom: 1.5px solid #BEBDBD;
+        padding-left: 5px;
+        outline: none;
+        }
+
+        input.n:focus {
+        border-bottom: 1.5px solid #B3A2FF;
+        transition: 600ms linear;
+        }
+
+        input.calcular {
+        margin: 10px auto;
+        width: 300px;
+        text-align: center;
+        height: 40px;
+        background: linear-gradient(to right, #71A2CB , #4C80AB);
+        border: 0;
+        border-radius: 5px;
+        color: #FFF;
+        transition: all 500ms ease-in-out;
+        }
+
+        input.calcular:hover {
+        background: linear-gradient(to right, #4C80AB, #71A2CB);
+        cursor: pointer;
+        }
+
+        input.limpar {
+        margin: auto;
+        width: 300px;
+        text-align: center;
+        height: 40px;
+        background: linear-gradient(to right, #022746 , #00325C);
+        border: 0;
+        border-radius: 5px;
+        color: #FFF;
+        }
+
+        input.limpar:hover {
+        background: linear-gradient(to right, #00325C, #022746);
+        cursor: pointer;
+        }
+    </style>
+       
+</body>
+</html>
